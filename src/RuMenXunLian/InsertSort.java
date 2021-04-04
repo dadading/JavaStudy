@@ -1,7 +1,7 @@
 package RuMenXunLian;
 
 /*
- * ≤Â»Î≈≈–Ú
+ * charu paixu
  * 
  * */
 

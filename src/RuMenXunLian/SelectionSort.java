@@ -1,7 +1,7 @@
 package RuMenXunLian;
 
 /*
- * Ñ¡ÔñÅÅĞò
+ * é€‰æ‹©æ’åº
  * 
  * 
  * */
@@ -10,7 +10,7 @@ public class SelectionSort {
 	public static void main(String[] args){
 		int[] arr1 = {1,4,3,2,5};
 		
-		//ÅÅĞòÖ®Ç°
+		//æ’åºä¹‹å‰
 		System.out.print("[");
 		for(int i=0;i<arr1.length;i++){
 			if(i==arr1.length-1){
@@ -30,7 +30,7 @@ public class SelectionSort {
 			}
 		}
 		
-		//ÅÅĞòºó
+		//æ’åºå
 		System.out.print("[");
 		for(int i=0;i<arr1.length;i++){
 			if(i==arr1.length-1){

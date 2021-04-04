@@ -1,7 +1,7 @@
 package RuMenXunLian;
 
 /*
- * ²åÈëÅÅĞò
+ * æ’å…¥æ’åº
  * 
  * */
 
@@ -9,7 +9,7 @@ public class InsertSort {
 	public static void main(String[] args){
 		int[] arr1 = {3,5,2,1,4};
 		
-	    //ÅÅĞòÇ°
+	    //æ’åºå‰
 		System.out.print("[");
 		for(int i=0;i<arr1.length;i++){
 			if(i==arr1.length-1){
@@ -19,7 +19,7 @@ public class InsertSort {
 			}
 		}
 		
-		//²åÈëÅÅĞò
+		//æ’å…¥æ’åº
 		for(int i=1;i<arr1.length;i++){
 			for(int m=i;m>0;m--){
 				if(arr1[m]<arr1[m-1]){
@@ -30,7 +30,7 @@ public class InsertSort {
 			}
 		}
 		
-	    //ÅÅĞòºó
+	    //æ’åºå
 		System.out.print("[");
 		for(int i=0;i<arr1.length;i++){
 			if(i==arr1.length-1){

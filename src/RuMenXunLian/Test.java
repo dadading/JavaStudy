@@ -42,7 +42,7 @@ public class Test{
 //        	}
 //        }
         
-        //≤Â»Î≈≈–Ú
+        //≤Â»Î≈≈–Ú 
         for(int i=1;i<arr1.length;i++){
         	for(int m=i;m>0;m--){
         		if(arr1[m]<arr1[m-1]){

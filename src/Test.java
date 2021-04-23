@@ -1,72 +1,25 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Test {
 	public static void main(String[] args) {
-		int[] arr1 = { 22, 11, 55, 44, 33 };
+		Scanner sc = new Scanner(System.in);
 
-		// 未排序之前
-		System.out.print("未排序之前:");
-		show(arr1);
+		// 数组元素个数
+		while (sc.hasNext()) {
+			int index = Integer.parseInt(sc.nextLine());
+			int[] arr1 = new int[index];
 
-		// 冒泡排序
-		sort(arr1);
-
-		// 排序之后
-		System.out.print("排序之后:");
-		show(arr1);
-
-		// 查找22所在的索引
-		int index = find(arr1, 22);
-
-		System.out.println("22在数组中出现的索引是：" + index);
-	}
-
-	public static int find(int[] arr1, int i) {
-		// TODO Auto-generated method stub
-		// 定义最大最小索引
-		int min = 0;
-		int max = arr1.length - 1;
-
-		// 定义中间的索引
-		int mid = (min + max) / 2;
-
-		while (arr1[mid] != i) {
-			if (i > arr1[mid]) {
-				min = mid + 1;
-			} else if (i < arr1[mid]) {
-				max = mid - 1;
+			String[] s1 = sc.nextLine().split(" ");
+			for (int i = 0; i < index; i++) {
+				arr1[i] = Integer.parseInt(s1[i]);
 			}
-			mid = (min + max) / 2;
 
-			// 如果未找到需要的元素则退出
-			if (min > max) {
-				return -1;
-			}
-		}
-		return mid;
-	}
+			Arrays.sort(arr1);
 
-	public static void show(int[] arr1) {
-		// TODO Auto-generated method stub
-		System.out.print("[");
-		for (int i = 0; i < arr1.length; i++) {
-			if (i == arr1.length - 1) {
-				System.out.println(arr1[i] + "]");
-			} else {
-				System.out.print(arr1[i] + ", ");
+			for (int m = 0; m < 5; m++) {
+				System.out.print(arr1[index - 1 - m] + " ");
 			}
 		}
 	}
-
-	public static void sort(int[] arr1) {
-		// TODO Auto-generated method stub
-		for (int i = 0; i < arr1.length - 1; i++) {
-			for (int m = 0; m < arr1.length - 1 - i; m++) {
-				if (arr1[m] > arr1[m + 1]) {
-					int max = arr1[m];
-					arr1[m] = arr1[m + 1];
-					arr1[m + 1] = max;
-				}
-			}
-		}
-	}
-
 }

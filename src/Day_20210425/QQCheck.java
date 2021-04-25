@@ -26,7 +26,7 @@ public class QQCheck {
 	public static boolean checkQQ(String qq) {
 		boolean flag = true;
 
-		if (qq.length() >= 5 || qq.length() <= 15) {
+		if (qq.length() >= 5 && qq.length() <= 15) {
 			if (!qq.startsWith("0")) {
 				char[] chr1 = qq.toCharArray();
 				for (int i = 0; i < chr1.length; i++) {

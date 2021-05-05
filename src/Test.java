@@ -1,14 +1,23 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Scanner;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Vector;
+
+import javax.swing.text.Element;
 
 public class Test {
 	public static void main(String[] args) {
-		Collection c = new ArrayList();
+		LinkedList link = new LinkedList();
 
-		System.out.println(c.add("Hello"));
+		link.add("hello");
+		link.add("world");
+		link.add("java");
 
-		System.out.println("c=" + c);
+		System.out.println(link);
+
+		System.out.println(link.getFirst());
 	}
 }

@@ -1,6 +1,15 @@
-public class Student {
-	private String name;
-	private int age;
+/**
+ * @author dingguanyi
+ *
+ */
+public class Student extends Object {
+	private  String name;
+	public static int age;
+
+	
+
+	public Student() {
+	}
 
 	public Student(String name, int age) {
 		super();

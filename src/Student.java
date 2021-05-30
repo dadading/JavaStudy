@@ -1,20 +1,22 @@
+import javax.jws.Oneway;
+
 /**
  * @author dingguanyi
  *
  */
-public class Student extends Object {
-	private  String name;
-	public static int age;
-
-	
-
-	public Student() {
-	}
+public class Student implements Comparable<Student> {
+	private String name;
+	private int age;
 
 	public Student(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -47,7 +49,9 @@ public class Student extends Object {
 		this.age = age;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
@@ -57,13 +61,19 @@ public class Student extends Object {
 		result = prime * result + age;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
+
+		// return 0;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
 	public boolean equals(Object obj) {
+		System.out.println(this + "---" + obj);
+
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -86,11 +96,16 @@ public class Student extends Object {
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
-//	@Override
-//	public String toString() {
-//		return "Student [name=" + name + ", age=" + age + "]";
-//	}
-	
-	
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + "]";
+	}
 
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+		int num = this.age - o.age;
+		int num2 = (num == 0) ? this.name.compareTo(o.name) : num;
+		return num2;
+	}
 }
